@@ -165,7 +165,7 @@ public unsafe class Memory
 
             switch (opcode)
             {
-                case 0x0156: // ClientHeartbeat
+                case 0x00F5: // ClientHeartbeat
                     PluginLog.Verbose($"[HyperFirewall] Passing outgoing packet with opcode {opcode} through.");
                     return PacketDispatcher_OnSendPacketHook.Original(a1, a2, a3, a4);
 
@@ -198,7 +198,7 @@ public unsafe class Memory
 
             switch (opcode)
             {
-                case 0x01A2: // ActorControlSelf
+                case 0x0267: // ActorControlSelf
                     PluginLog.Verbose($"[HyperFirewall] Passing incoming packet with opcode {opcode} through.");
                     PacketDispatcher_OnReceivePacketHook.Original(a1, a2, a3);
                     return;
